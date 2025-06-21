@@ -1,0 +1,42 @@
+/* =================
+    Reset 
+   ================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =================
+    Typography 
+   ================= */
+
+/* =================
+    Header 
+   ================= */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-title-container {
+  color: #0e0e0e;
+  text-decoration: none;
+}
+
+.logo-title-container span {
+  font-size: 0.875rem;
+  font-family: "Roboto", sans-serif;
+}
+
+/* =================
+    Main 
+   ================= */
+
+/* =================
+    Footer 
+   ================= */
