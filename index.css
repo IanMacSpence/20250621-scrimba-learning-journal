@@ -15,25 +15,18 @@ body {
 }
 
 /* =================
-    Typography 
+    Site Layout 
    ================= */
 
-.container {
-  /* max-width: 1200px;  */
-  margin: 0 auto;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
 /* =================
     Header 
    ================= */
 
-header {
+.site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1.25em;
-  padding-bottom: 1.25em;
+  padding: 1rem 1.25rem;
 }
 .logo-title-container {
   color: #0e0e0e;
@@ -72,27 +65,25 @@ header nav ul li a {
    ================= */
 
 /* =================
+    Typography 
+   ================= */
+
+/* =================
     Featured Post 
    ================= */
 .featured-post {
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.31) 0%,
       rgba(0, 0, 0, 0.31) 100%
     ),
-    url("./img/hero-img.png") lightgray 0px -255.741px / 100% 188.396% no-repeat;
+    url("./img/hero-img.png") lightgray 0px -245.741px / 100% 188.396% no-repeat;
   /* background-size: cover; */
   color: #fff;
-  padding-top: 5.5em;
-  padding-bottom: 1.5em;
+  padding: 5.5rem 1.25rem 1rem;
 }
-
-background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.31) 0%,
-    rgba(0, 0, 0, 0.31) 100%
-  ),
-  url(<path-to-image>) lightgray 0px -255.741px / 100% 188.396% no-repeat;
 
 .featured-date {
   color: #fff;
@@ -102,6 +93,7 @@ background: linear-gradient(
 .featured-post h1 {
   font-size: 2rem;
   font-weight: 700;
+  line-height: 108.2%;
 }
 
 .featured-description {
@@ -111,7 +103,57 @@ background: linear-gradient(
 /* =================
     Articles 
    ================= */
+.articles-section {
+  padding: 2rem 1.25rem 2.75rem;
+}
+.articles-container {
+  display: grid;
+  gap: 2.5em;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  background-color: white;
+}
 
+.article {
+  text-decoration: none;
+}
+.article-img {
+  width: 100%;
+  margin-bottom: 0.5625em;
+  border-radius: 3px;
+  background: lightgray 50%;
+}
+
+.article-date {
+  color: #000;
+  font-size: 0.875rem;
+}
+.article-heading {
+  color: #141414;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 108.2%;
+  margin: 0.375em 0;
+}
+.article-description {
+  color: #505050;
+  font-size: 1rem;
+  line-height: 125%;
+}
+/* .view-more-container{
+
+} */
+.view-more {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #000;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  display: block;
+  margin: 2rem auto 0 auto;
+}
 /* =================
     Footer 
    ================= */
@@ -119,16 +161,68 @@ footer {
   background: #202020;
   text-align: center;
   font-size: 0.75rem;
-  font-weight: 700;
-  padding-top: 3em;
-  padding-bottom: 3em;
+  padding: 3em 0;
 }
 
 .footer-title {
+  font-weight: 700;
   color: #ececec;
 }
 
 .footer-copy {
   color: #d7d7d7;
   font-weight: 400;
+}
+
+@media (min-width: 1085px) {
+  /* =================
+    Header 
+   ================= */
+
+  .site-header {
+    padding: 1.5rem 3.25rem;
+  }
+  .logo-title-container img {
+    width: 34px;
+  }
+  .logo-title-container span {
+    font-size: 1.25rem;
+  }
+
+  header nav ul li a {
+    font-size: 1rem;
+  }
+
+  /* =================
+    Featured Post 
+   ================= */
+  .featured-post {
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.31) 0%,
+        rgba(0, 0, 0, 0.31) 100%
+      ),
+      url("./img/hero-img.png") lightgray 0px -670.239px / 100% 296.448% no-repeat;
+    padding: 18rem 3.25rem 3.75rem;
+  }
+
+  .featured-date {
+    font-size: 1rem;
+  }
+
+  .featured-post h1 {
+    font-size: 2.5rem;
+  }
+
+  .featured-description {
+    max-width: 614px;
+  }
+
+  .articles-section {
+    padding: 3.25rem;
+  }
+
+  footer {
+    padding: 2.25rem 0;
+  }
 }
